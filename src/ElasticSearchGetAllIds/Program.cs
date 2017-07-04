@@ -59,7 +59,7 @@ namespace ElasticSearchGetAllIds
                 using (var httpClient = new HttpClient())
                 {
                     // Do the actual request and await the response with post
-                    var baseHttpResponse = await httpClient.PostAsync(endpoint + "search-stack/all/_search?scroll=" + keepScrollactiveFor, baseHttpContent);
+                    var baseHttpResponse = await httpClient.PostAsync(endpoint + "_search?scroll=" + keepScrollactiveFor, baseHttpContent);
                     //if any errors will exit
                     if (baseHttpResponse.StatusCode != HttpStatusCode.OK)
                     {
